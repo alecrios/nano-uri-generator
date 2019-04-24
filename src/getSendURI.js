@@ -1,4 +1,4 @@
-import queryStringConverter from 'js-query-string';
+import getQueryString from './util/getQueryString';
 
 /**
  * Generates a URI for sending.
@@ -14,7 +14,7 @@ export default function (address, amount, label, message) {
 		throw Error('Address must be defined.');
 	}
 
-	const queryString = queryStringConverter.convert({
+	const queryString = getQueryString({
 		amount,
 		label,
 		message,

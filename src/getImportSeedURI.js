@@ -1,4 +1,4 @@
-import queryStringConverter from 'js-query-string';
+import getQueryString from './util/getQueryString';
 
 /**
  * Generates a URI for importing a seed.
@@ -14,7 +14,7 @@ export default function (seed, label, message, lastIndex) {
 		throw Error('Seed must be defined.');
 	}
 
-	const queryString = queryStringConverter.convert({
+	const queryString = getQueryString({
 		label,
 		message,
 		lastindex: lastIndex,

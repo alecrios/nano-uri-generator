@@ -1,4 +1,4 @@
-import queryStringConverter from 'js-query-string';
+import getQueryString from './util/getQueryString';
 
 /**
  * Generates a URI for changing the representative.
@@ -13,7 +13,7 @@ export default function (address, label, message) {
 		throw Error('Address must be defined.');
 	}
 
-	const queryString = queryStringConverter.convert({
+	const queryString = getQueryString({
 		label,
 		message,
 	});

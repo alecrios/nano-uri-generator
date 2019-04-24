@@ -55,8 +55,5 @@
   "nyc": {
     "sourceMap": false,
     "instrument": false
-  },
-  "dependencies": {
-    "js-query-string": "^1.1.4"
   }
 }

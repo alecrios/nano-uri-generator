@@ -1,4 +1,4 @@
-import queryStringConverter from 'js-query-string';
+import getQueryString from './util/getQueryString';
 
 /**
  * Generates a URI for importing a private key.
@@ -13,7 +13,7 @@ export default function (privateKey, label, message) {
 		throw Error('Private key must be defined.');
 	}
 
-	const queryString = queryStringConverter.convert({
+	const queryString = getQueryString({
 		label,
 		message,
 	});
