@@ -1,7 +1,7 @@
 {
   "name": "nano-uri-generator",
   "version": "1.0.0",
-  "description": "Generates Nano URIs",
+  "description": "Generates Nano URIs for sending amounts, changing representatives, and more",
   "main": "lib/nano-uri-generator.js",
   "scripts": {
     "build": "webpack --env dev && webpack --env build && npm run test",
