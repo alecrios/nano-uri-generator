@@ -63,7 +63,7 @@ getSendURI(nanoAddress, label);
  */
 ```
 
-### `getImportSeedURI(seed[, label[, message]])`
+### `getImportSeedURI(seed[, label[, message[, lastIndex]]])`
 
 ```js
 /**
