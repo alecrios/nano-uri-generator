@@ -1,6 +1,6 @@
 # Nano URI Generator
 
-Nano URI Generator is a simple library for generating URIs for the Nano cryptocurrency. It currently supports URIs for sending to an address, changing the representative to an address, importing a private key, and importing a seed.
+Nano URI Generator is a simple library for generating URIs for the Nano cryptocurrency in compliance with the official [URI and QR Code Standard](https://github.com/nanocurrency/nano-node/wiki/URI-and-QR-Code-Standard). It currently supports URIs for sending to an address, changing the representative to an address, importing a private key, and importing a seed.
 
 ## Installation
 
