@@ -1,5 +1,5 @@
-import {expect} from 'chai';
-import {getChangeRepURI} from '../lib/nano-uri-generator';
+const { expect } = require('chai');
+const { getChangeRepURI } = require('../dist/nano-uri-generator');
 
 describe('getChangeRepURI', () => {
 	it('should throw an error for missing address', () => {

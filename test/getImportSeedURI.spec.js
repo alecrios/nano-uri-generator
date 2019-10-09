@@ -1,5 +1,5 @@
-import {expect} from 'chai';
-import {getImportSeedURI} from '../lib/nano-uri-generator';
+const { expect } = require('chai');
+const { getImportSeedURI } = require('../dist/nano-uri-generator');
 
 describe('getImportSeedURI', () => {
 	it('should throw an error for missing seed', () => {

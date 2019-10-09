@@ -1,5 +1,5 @@
-import {expect} from 'chai';
-import {getImportPrivateKeyURI} from '../lib/nano-uri-generator';
+const { expect } = require('chai');
+const { getImportPrivateKeyURI } = require('../dist/nano-uri-generator');
 
 describe('getImportPrivateKeyURI', () => {
 	it('should throw an error for missing private key', () => {

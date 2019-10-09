@@ -8,6 +8,70 @@ Nano URI Generator is a simple library for generating URIs for the Nano cryptocu
 npm install nano-uri-generator
 ```
 
+## API
+
+``` ts
+/**
+ * Generates a URI for changing the representative.
+ *
+ * @param {string} address The address to change the representative to.
+ * @param {string} [label] The label of the representative change.
+ * @param {string} [message] The message of the representative change.
+ *
+ * @throws {Error} Address must be defined.
+ *
+ * @returns {string} The URI for changing the representative.
+ */
+export default function getChangeRepURI(address: string, label?: string, message?: string): string;
+```
+
+``` ts
+/**
+ * Generates a URI for importing a private key.
+ *
+ * @param {string} privateKey The private key to import.
+ * @param {string} [label] The label of the import.
+ * @param {string} [message] The message of the import.
+ *
+ * @throws {Error} Private key must be defined.
+ *
+ * @returns {string} The URI for importing a private key.
+ */
+export default function getImportPrivateKeyURI(privateKey: string, label?: string, message?: string): string;
+```
+
+``` ts
+/**
+ * Generates a URI for importing a seed.
+ *
+ * @param {string} seed The seed to import.
+ * @param {string} [label] The label of the import.
+ * @param {string} [message] The message of the import.
+ * @param {number | string} [lastIndex] The last index to import.
+ *
+ * @throws {Error} Seed must be defined.
+ *
+ * @returns {string} The URI for importing a seed.
+ */
+export default function getImportSeedURI(seed: string, label?: string, message?: string, lastIndex?: number | string): string;
+```
+
+``` ts
+/**
+ * Generates a URI for sending.
+ *
+ * @param {string} address The address to send to.
+ * @param {number | string} [amount] The amount to send (in raw).
+ * @param {string} [label] The label of the transaction.
+ * @param {string} [message] The message of the transaction.
+ *
+ * @throws {Error} Address must be defined.
+ *
+ * @returns {string} The URI for sending.
+ */
+export default function getSendURI(address: string, amount?: number | string, label?: string, message?: string): string;
+```
+
 ## Examples
 
 Generate a URI for sending Nano to an address:
@@ -33,62 +97,6 @@ const label = 'Nano Crawler Representative';
 
 getSendURI(nanoAddress, label);
 // nano:nano_1x7biz69cem95oo7gxkrw6kzhfywq4x5dupw4z1bdzkb74dk9kpxwzjbdhhs?label=Nano%20Crawler%20Representative
-```
-
-## API
-
-### `getChangeRepURI(address[, label[, message]])`
-
-```js
-/**
- * Generates a URI for changing the representative.
- * @param {String} address The address to change the representative to.
- * @param {String} [label] The label of the representative change.
- * @param {String} [message] The message of the representative change.
- * @throws {Error} Address must be defined.
- * @returns {String} The URI for changing the representative.
- */
-```
-
-### `getImportPrivateKeyURI(privateKey[, label[, message]])`
-
-```js
-/**
- * Generates a URI for importing a private key.
- * @param {String} privateKey The private key to import.
- * @param {String} [label] The label of the import.
- * @param {String} [message] The message of the import.
- * @throws {Error} Private key must be defined.
- * @returns {String} The URI for importing a private key.
- */
-```
-
-### `getImportSeedURI(seed[, label[, message[, lastIndex]]])`
-
-```js
-/**
- * Generates a URI for importing a seed.
- * @param {String} seed The seed to import.
- * @param {String} [label] The label of the import.
- * @param {String} [message] The message of the import.
- * @param {Number|String} [lastIndex] The last index to import.
- * @throws {Error} Seed must be defined.
- * @returns {String} The URI for importing a seed.
- */
-```
-
-### `getSendURI(address[, amount[, label[, message]]])`
-
-```js
-/**
- * Generates a URI for sending.
- * @param {String} address The address to send to.
- * @param {Number|String} [amount] The amount to send (in raw).
- * @param {String} [label] The label of the transaction.
- * @param {String} [message] The message of the transaction.
- * @throws {Error} Address must be defined.
- * @returns {String} The URI for sending.
- */
 ```
 
 ## QR Code Generation

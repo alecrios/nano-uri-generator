@@ -1,9 +1,11 @@
 /**
  * Generates a query string from an object.
- * @param {Object} payload The object to generate a query string from.
- * @returns {String} The query string.
+ *
+ * @param {object} payload The object to generate a query string from.
+ *
+ * @returns {string} The query string.
  */
-export default function (payload) {
+export default function getQueryString(payload: object): string {
 	const parameters = [];
 
 	Object.keys(payload).forEach((key) => {

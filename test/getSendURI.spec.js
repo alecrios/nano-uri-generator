@@ -1,5 +1,5 @@
-import {expect} from 'chai';
-import {getSendURI} from '../lib/nano-uri-generator';
+const { expect } = require('chai');
+const { getSendURI } = require('../dist/nano-uri-generator');
 
 describe('getSendURI', () => {
 	it('should throw an error for missing address', () => {
