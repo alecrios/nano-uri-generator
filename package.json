@@ -1,6 +1,6 @@
 {
 	"name": "nano-uri-generator",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "Generates Nano URIs for sending amounts, changing representatives, and more",
 	"source": "src/index.ts",
 	"types": "dist/index.d.ts",
