@@ -1,6 +1,10 @@
 # Nano URI Generator
 
-Nano URI Generator is a simple library for generating URIs for the Nano cryptocurrency in compliance with the official [URI and QR Code Standard](https://github.com/nanocurrency/nano-node/wiki/URI-and-QR-Code-Standard). It currently supports URIs for sending to an address, changing the representative to an address, importing a private key, and importing a seed.
+Nano URI Generator is a simple library for generating URIs for the Nano cryptocurrency. It currently supports URIs for sending to an address, changing the representative to an address, importing a private key, and importing a seed.
+
+## URI Specifications
+
+See the official [URI Specifications](https://docs.nano.org/integration-guides/the-basics/#uri-and-qr-code-standards) on the Nano documentation website.
 
 ## Installation
 
@@ -22,7 +26,7 @@ npm install nano-uri-generator
  *
  * @returns {string} The URI for changing the representative.
  */
-export default function getChangeRepURI(address: string, label?: string, message?: string): string;
+export declare function getChangeRepURI(address: string, label?: string, message?: string): string;
 ```
 
 ``` ts
@@ -37,7 +41,7 @@ export default function getChangeRepURI(address: string, label?: string, message
  *
  * @returns {string} The URI for importing a private key.
  */
-export default function getImportPrivateKeyURI(privateKey: string, label?: string, message?: string): string;
+export declare function getImportPrivateKeyURI(privateKey: string, label?: string, message?: string): string;
 ```
 
 ``` ts
@@ -53,7 +57,7 @@ export default function getImportPrivateKeyURI(privateKey: string, label?: strin
  *
  * @returns {string} The URI for importing a seed.
  */
-export default function getImportSeedURI(seed: string, label?: string, message?: string, lastIndex?: number | string): string;
+export declare function getImportSeedURI(seed: string, label?: string, message?: string, lastIndex?: number | string): string;
 ```
 
 ``` ts
@@ -69,7 +73,7 @@ export default function getImportSeedURI(seed: string, label?: string, message?:
  *
  * @returns {string} The URI for sending.
  */
-export default function getSendURI(address: string, amount?: number | string, label?: string, message?: string): string;
+export declare function getSendURI(address: string, amount?: number | string, label?: string, message?: string): string;
 ```
 
 ## Examples
